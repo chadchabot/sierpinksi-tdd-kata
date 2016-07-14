@@ -1,0 +1,10 @@
+require './lib/evolver'
+state = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001"
+
+NUM_GENERATIONS = 125
+evolver = Evolver.new()
+NUM_GENERATIONS.times do
+  puts state
+  state = evolver.next state
+end
+puts state
